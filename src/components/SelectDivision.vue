@@ -1,5 +1,5 @@
 <template>
-  <select id="division" class="form-control" @change="changeItem($event)">
+  <select id="division" class="form-control" @change="changeItem">
     <option
       v-for="(item, index) in options"
       :key="item.name"

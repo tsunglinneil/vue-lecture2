@@ -63,7 +63,14 @@
       <!-- v-model - DROPDOWN -->
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
-          <label for="department">事業處</label>
+          <label for="demoTest">DEMO-TEST</label>
+          <select id="demoTest" class="form-control" v-model="departmentIdx">
+            <option v-for="(item, index) in 3" :key="index" :value="index">{{index}}</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
+          <label for="department">機構別</label>
           <select id="department" class="form-control">
             <option></option>
           </select>
@@ -79,7 +86,7 @@
         </div>
 
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
-          <label for="group">組別</label>
+          <label for="group">小組別</label>
           <select id="group" class="form-control">
             <option></option>
           </select>
