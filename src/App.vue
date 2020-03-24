@@ -2,13 +2,20 @@
   <div class="container">
     <form>
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
+        >
           <h1>員工檔案建立</h1>
           <hr />
           <!-- v-model - TEXT -->
           <div class="form-group">
             <label for="nametc">姓名</label>
-            <input type="text" id="nametc" class="form-control" v-model="employee.nametc" />
+            <input
+              type="text"
+              id="nametc"
+              class="form-control"
+              v-model="employee.nametc"
+            />
           </div>
           <!-- v-model - behind the scense -->
           <div class="form-group">
@@ -29,73 +36,126 @@
       </div>
       <!-- v-model - TEXT AREA -->
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group"
+        >
           <label for="intro">自我介紹</label>
           <br />
-          <textarea id="intro" rows="5" class="form-control" v-model="employee.intro"></textarea>
+          <textarea
+            id="intro"
+            rows="5"
+            class="form-control"
+            v-model="employee.intro"
+          ></textarea>
         </div>
       </div>
       <!-- v-model - CHECKBOX -->
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
+        >
           <div class="form-group">
             <!-- Police Criminal Record Certificate -->
             <label for="pcrc">
-              <input type="checkbox" id="pcrc" value="良民證" v-model="attachment" /> 已繳交良民證
+              <input
+                type="checkbox"
+                id="pcrc"
+                value="良民證"
+                v-model="attachment"
+              />
+              已繳交良民證
             </label>
             <label for="bank">
-              <input type="checkbox" id="bank" value="銀行帳戶" v-model="attachment" /> 已開戶
+              <input
+                type="checkbox"
+                id="bank"
+                value="銀行帳戶"
+                v-model="attachment"
+              />
+              已開戶
             </label>
           </div>
         </div>
       </div>
       <!-- v-model - RADIO BUTTON -->
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group"
+        >
           <label for="male">
-            <input type="radio" id="male" value="男" v-model="employee.gender" /> 男
+            <input
+              type="radio"
+              id="male"
+              value="男"
+              v-model="employee.gender"
+            />
+            男
           </label>
           <label for="female">
-            <input type="radio" id="female" value="女" v-model="employee.gender" /> 女
+            <input
+              type="radio"
+              id="female"
+              value="女"
+              v-model="employee.gender"
+            />
+            女
           </label>
         </div>
       </div>
       <!-- v-model - DROPDOWN -->
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group"
+        >
           <label for="demoTest">DEMO-TEST</label>
           <select id="demoTest" class="form-control" v-model="departmentIdx">
-            <option v-for="(item, index) in 3" :key="index" :value="index">{{index}}</option>
+            <option v-for="(item, index) in 3" :key="index" :value="index">{{
+              index
+            }}</option>
           </select>
         </div>
 
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group"
+        >
           <label for="department">機構別</label>
-          <select id="department" class="form-control">
+          <!-- <select id="department" class="form-control">
             <option></option>
-          </select>
-          <!-- <select-department :options="department" v-model="departmentIdx"></select-department> -->
+          </select> -->
+          <select-department
+            :options="department"
+            v-model="departmentIdx"
+          ></select-department>
         </div>
 
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group"
+        >
           <label for="division">部門別</label>
-          <select id="division" class="form-control">
+          <!-- <select id="division" class="form-control">
             <option></option>
-          </select>
-          <!-- <select-division :options="division" v-model="divisionIdx"></select-division> -->
+          </select> -->
+          <select-division
+            :options="division"
+            v-model="divisionIdx"
+          ></select-division>
         </div>
 
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group"
+        >
           <label for="group">小組別</label>
-          <select id="group" class="form-control">
+          <!-- <select id="group" class="form-control">
             <option></option>
-          </select>
-          <!-- <select-group :options="group" v-model="groupIdx"></select-group> -->
+          </select> -->
+          <select-group :options="group" v-model="groupIdx"></select-group>
         </div>
       </div>
       <hr />
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <div
+          class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
+        >
           <button class="btn btn-primary" @click.prevent="submit">送出</button>
         </div>
       </div>
@@ -119,7 +179,10 @@
               <li v-for="item in attachment" :key="item">{{ item }}</li>
             </ul>
             <p>性別: {{ employee.gender }}</p>
-            <p>隸屬單位: {{ department[departmentIdx].name}}, {{ division[divisionIdx].name}}, {{ group[groupIdx].name}}</p>
+            <p>
+              隸屬單位: {{ department[departmentIdx].name }},
+              {{ division[divisionIdx].name }}, {{ group[groupIdx].name }}
+            </p>
             <ul>
               <li>departmentIdx: {{ departmentIdx }}</li>
               <li>divisionIdx: {{ divisionIdx }}</li>
@@ -226,5 +289,4 @@ const organization = [
 ];
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
